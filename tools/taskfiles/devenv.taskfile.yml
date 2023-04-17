@@ -3,26 +3,34 @@
 version: '3'
 
 tasks:
-  setup-nix:
+  install-nix:
+    desc: Install nix
+    cmds:
+      - sh <(curl -L https://nixos.org/nix/install)
+
+  install-cachnix:
     desc: Setup all the required bits for nix. Only run once for each host
     cmds:
-      # - TODO: required to run the following command in another shell or restart the current shell
-      - nix-env -iA cachix -f https://cachix.org/api/v1/install  
+      # - nix-env -iA cachix -f https://cachix.org/api/v1/install  # note: doesn't work. use next line instead
+      - nix profile install nixpkgs#cachix --extra-experimental-features nix-command --extra-experimental-features flakes
       - echo "trusted-users = root {{.WHOAMI}}" | sudo tee -a /etc/nix/nix.conf && sudo pkill nix-daemon
       - cachix use devenv
     vars:
       WHOAMI: 
         sh: whoami
 
-  setup-devenv:
+  install-devenv:
     desc: Install devenv. (Required to run on devcontainer)
     cmds:
-      - nix profile install --accept-flake-config github:cachix/devenv/latest
+      # - nix-env -if https://github.com/cachix/devenv/tarball/latest
+      - nix profile install --accept-flake-config github:cachix/devenv/latest --extra-experimental-features nix-command --extra-experimental-features flakes
 
-  setup:
-    cmds:
-      - task: setup-nix
-      - task: setup-devenv
+  ## Note: only for documentation. They need to be run separately
+  # install:
+  #   cmds:
+  #     - task: install-nix
+  #     - task: install-cachnix
+  #     - task: install-devenv
 
   init:
     desc: Initialize a devenv environment

@@ -83,6 +83,7 @@ for i, field_type in enumerate(field_types):
         if resp.status_code != 201:
             log.error("Error while indexing doc", url=url, resp=resp, index_name=index_name, field_type=field_type, field_value=field_value)
             
+        # NOTE: search results
         url = f"{base_url}/{index_name}/_search"
         body = """
         {
@@ -99,13 +100,13 @@ for i, field_type in enumerate(field_types):
         
         # todo: something is wrong here. request from postman return hits, but not from here
         
-        ignored_expr = parse("$.hits.hits[0]._ignored")
-        res = ignored_expr.find(json_resp)
-        if res and len(res) > 0:
-            log.info("Ignored", result=json_resp)
-        else:   
-            output_expr = parse("$.hits.hits[0].fields.malformed_field")
-            res = output_expr.find(json_resp)
-            output = res[0]
-            log.info("Not ignored", input=field_value, output=output)
+        # ignored_expr = parse("$.hits.hits[0]._ignored")
+        # res = ignored_expr.find(json_resp)
+        # if res and len(res) > 0:
+        #     log.info("Ignored", result=json_resp)
+        # else:   
+        #     output_expr = parse("$.hits.hits[0].fields.malformed_field")
+        #     res = output_expr.find(json_resp)
+        #     output = res[0]
+        #     log.info("Not ignored", input=field_value, output=output)
 

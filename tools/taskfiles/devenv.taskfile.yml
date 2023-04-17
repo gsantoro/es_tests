@@ -3,17 +3,26 @@
 version: '3'
 
 tasks:
-  setup:
-    desc: Setup all the required bits for devenv. Only run once for each host
+  setup-nix:
+    desc: Setup all the required bits for nix. Only run once for each host
     cmds:
       # - TODO: required to run the following command in another shell or restart the current shell
       - nix-env -iA cachix -f https://cachix.org/api/v1/install  
       - echo "trusted-users = root {{.WHOAMI}}" | sudo tee -a /etc/nix/nix.conf && sudo pkill nix-daemon
       - cachix use devenv
-      - nix-env -if https://github.com/cachix/devenv/tarball/latest
     vars:
       WHOAMI: 
         sh: whoami
+
+  setup-devenv:
+    desc: Install devenv. (Required to run on devcontainer)
+    cmds:
+      - nix profile install --accept-flake-config github:cachix/devenv/latest
+
+  setup:
+    cmds:
+      - task: setup-nix
+      - task: setup-devenv
 
   init:
     desc: Initialize a devenv environment

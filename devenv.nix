@@ -9,8 +9,6 @@
      pkgs.direnv
   ];
 
-  scripts.devenv-install.exec = "nix profile install --accept-flake-config github:cachix/devenv/latest";
-
   scripts.direnv-allow.exec = "direnv allow";
   scripts.direnv-reload.exec = "direnv reload";
 

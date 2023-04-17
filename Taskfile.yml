@@ -1,0 +1,9 @@
+# https://taskfile.dev
+
+version: '3'
+
+includes:
+  devenv: tools/taskfiles/devenv.taskfile.yml
+  direnv: tools/taskfiles/direnv.taskfile.yml
+  elastic: tools/taskfiles/elastic.taskfile.yml
+  poetry: tools/taskfiles/poetry.taskfile.yml

@@ -1,0 +1,42 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  setup:
+    desc: Setup all the required bits for devenv. Only run once for each host
+    cmds:
+      # - TODO: required to run the following command in another shell or restart the current shell
+      - nix-env -iA cachix -f https://cachix.org/api/v1/install  
+      - echo "trusted-users = root {{.WHOAMI}}" | sudo tee -a /etc/nix/nix.conf && sudo pkill nix-daemon
+      - cachix use devenv
+      - nix-env -if https://github.com/cachix/devenv/tarball/latest
+    vars:
+      WHOAMI: 
+        sh: whoami
+
+  init:
+    desc: Initialize a devenv environment
+    cmds:
+      - devenv init
+
+  update:
+    desc: Update dependencies
+    cmds: 
+      - devenv update
+
+  shell:
+    desc: Open a shell
+    cmds:
+      - devenv shell
+
+  up:
+    desc: Run background processes
+    cmds:
+      - devenv up
+
+  # Note: t devenv:search -- gofmt
+  search:
+    desc: Search for packages in the nix repo
+    cmds:
+      - devenv search {{.CLI_ARGS}}

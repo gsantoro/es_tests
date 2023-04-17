@@ -1,0 +1,34 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  init:
+    dir: '{{.USER_WORKING_DIR}}'
+    cmds:
+      - poetry init
+
+  info:
+    dir: '{{.USER_WORKING_DIR}}'
+    cmds:
+      - poetry env info
+
+  run:
+    dir: '{{.USER_WORKING_DIR}}'
+    cmds:
+      - poetry run python {{.APPLICATION_PATH}}
+
+  shell:
+    dir: '{{.USER_WORKING_DIR}}'
+    cmds:
+      - poetry shell
+
+  install:
+    dir: '{{.USER_WORKING_DIR}}'
+    cmds:
+      - poetry shell
+
+  add-dev-package:
+    dir: '{{.USER_WORKING_DIR}}'
+    cmds:
+      - poetry add --group dev {{.CLI_ARGS}}

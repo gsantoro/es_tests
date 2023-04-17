@@ -1,0 +1,17 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  up:
+    desc: Bring up elastic stack via elastic-package but first it destroys any previous running cluster
+    deps: 
+      - down
+    cmds:
+      - elastic-package stack up --version={{.ELASTIC_STACK_VERSION}} -v -d
+
+  down:
+    desc: Bring down elastic stack
+    cmds:
+      - elastic-package stack down
+    ignore_error: true

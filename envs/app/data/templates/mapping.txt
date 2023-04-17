@@ -1,0 +1,12 @@
+{
+    "settings": {
+        "index.mapping.ignore_malformed": true
+    },
+    "mappings": {
+        "properties": {
+            "malformed_field": {
+                "type": "{{ field_type }}"
+            }
+        }
+    }
+}

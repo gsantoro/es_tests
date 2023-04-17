@@ -23,10 +23,10 @@ tasks:
     cmds:
       - poetry shell
 
-  install:
+  add:
     dir: '{{.USER_WORKING_DIR}}'
     cmds:
-      - poetry shell
+      - poetry add {{.CLI_ARGS}}
 
   add-dev-package:
     dir: '{{.USER_WORKING_DIR}}'

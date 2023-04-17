@@ -8,8 +8,11 @@
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            "program": "${file}",
+            "program": "${workspaceFolder}/main.py",
             "envFile": "${workspaceFolder}/envs/elastic/.env",
+            "env": {
+                "TEMPLATES_PATH": "envs/app/data/templates"
+            },
             "console": "integratedTerminal",
             "justMyCode": true
         }

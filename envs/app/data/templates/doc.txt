@@ -1,0 +1,4 @@
+{
+    "text": "Random text",
+    "malformed_field": {{ field_value }}
+}

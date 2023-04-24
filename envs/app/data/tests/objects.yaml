@@ -1,0 +1,12 @@
+"integer":
+    - 1
+"keyword":
+    - "\"foo\""
+    - '["foo", "foo", "bar", "baz"]'
+"object":
+    - '{"age":30,"name":{"first":"John","last":"Smith"}}'
+    - '{"age":30,"name.first":"John","name.last":"Smith"}'
+"flattened":
+    - '{"priority":"urgent","release":["v1.2.5","v1.3.0"],"timestamp":{"created":1541458026,"closed":1541457010}}'
+"nested":
+    - '[{"first":"John","last":"Smith"},{"first":"Alice","last":"White"}]'

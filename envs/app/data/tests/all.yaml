@@ -1,0 +1,63 @@
+"integer":
+    - 1
+    - -1
+    - 0
+"double":
+    - 1.234567891234568
+"byte":
+    - -127
+    - 128
+"keyword":
+    - "\"foo\""
+    - '["foo", "foo", "bar", "baz"]'
+"constant_keyword": 
+    - "\"debug\""
+"wildcard": 
+    - "\"*quite*lengthy\""
+"date": 
+    - 1420070400001
+    - "\"2015-01-01T12:10:30Z\""
+    - "\"2015-01-01\""
+"ip": 
+    - "\"192.168.1.1\""
+    - "\"192.168.0.0/16\""
+    - "\"2001:db8::/48\""
+    - "\"2001:db8::1:0:0:1\""
+"binary": 
+    - "\"U29tZSBiaW5hcnkgYmxvYg==\""
+"boolean": 
+    - "true"
+    - "\"true\""
+    - "false"
+    - "\"false\""
+    - "\"\""
+"text":
+    - "\"jumped over the lazy dog\""
+"match_only_text":
+    - "\"jumped over the lazy dog\""
+"integer_range":
+    - '{"gte":10,"lt":20}'
+"object":
+    - '{"age":30,"name":{"first":"John","last":"Smith"}}'
+    - '{"age":30,"name.first":"John","name.last":"Smith"}'
+"flattened":
+    - '{"priority":"urgent","release":["v1.2.5","v1.3.0"],"timestamp":{"created":1541458026,"closed":1541457010}}'
+"nested":
+    - '[{"first":"John","last":"Smith"},{"first":"Alice","last":"White"}]'
+"geo_point":
+    - '{"type":"Point","coordinates":[-71.34,41.12]}'
+    - "\"POINT (-71.34 41.12)\""
+    - '{"lat":41.12,"lon":-71.34}'
+    - '[ -71.34, 41.12 ]'
+    - "\"41.12,-71.34\""
+    - "\"drm3btev3e86\""  # NOTE: geohash
+"point":
+    - '{"type":"Point","coordinates":[-71.34,41.12]}'
+    - "\"POINT (-71.34 41.12)\""
+    - '{"x":41.12,"y":-71.34}'
+    - '[ -71.34, 41.12 ]'
+    - "\"-71.34,41.12\""
+"version":
+    - '["8.0.0-beta1", "8.5.0", "0.90.12", "2.6.1", "1.3.4", "1.3.4"]'
+"histogram":
+    - '{"values":[0.1,0.2,0.3,0.4,0.5],"counts":[3,7,23,12,6]}'

@@ -1,6 +1,6 @@
 "keyword":
     - "\"foo\""
-    - ["foo", "foo", "bar", "baz"]
+    - '["foo", "foo", "bar", "baz"]'
 "constant_keyword": 
     - "\"debug\""
 "wildcard": 

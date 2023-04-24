@@ -1,19 +1,13 @@
-"integer":
-    - 1
-    - 0
-"keyword":
-    - "\"foo\""
-"date": 
-    - 1420070400001
-    - "\"2015-01-01T12:10:30Z\""
-    - "\"2015-01-01\""
-"ip": 
-    - "\"192.168.1.1\""
-"binary": 
-    - "\"U29tZSBiaW5hcnkgYmxvYg==\""
-"boolean": 
-    - "true"
-    - "\"true\""
-    - "false"
-    - "\"false\""
-    - "\"\""
+# "integer":
+#     - 1
+# "keyword":
+#     - "\"foo\""
+#     - '["foo", "foo", "bar", "baz"]'
+"text":
+    - "\"jumped over the lazy dog\""
+# "match_only_text":
+#     - "\"jumped over the lazy dog\""
+# "integer_range":
+#     - '{"gte":10,"lt":20}'
+"object":
+    - '{"age":30,"name":{"first":"John","last":"Smith"}}'

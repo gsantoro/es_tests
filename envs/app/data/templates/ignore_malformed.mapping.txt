@@ -5,7 +5,7 @@
     "mappings": {
         "properties": {
             "malformed_field": {
-                "type": "{{ field_type }}"
+                "type": "{{ mapping_type }}"
             }
         }
     }

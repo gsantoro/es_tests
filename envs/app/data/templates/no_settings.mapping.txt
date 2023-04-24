@@ -1,0 +1,9 @@
+{
+    "mappings": {
+        "properties": {
+            "malformed_field": {
+                "type": "{{ mapping_type }}"
+            }
+        }
+    }
+}

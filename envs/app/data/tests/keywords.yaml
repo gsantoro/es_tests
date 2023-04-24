@@ -1,0 +1,7 @@
+"keyword":
+    - "\"foo\""
+    - ["foo", "foo", "bar", "baz"]
+"constant_keyword": 
+    - "\"debug\""
+"wildcard": 
+    - "\"*quite*lengthy\""

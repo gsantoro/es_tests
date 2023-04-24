@@ -1,112 +1,63 @@
-import json
-import os
-import requests
-from requests.auth import HTTPBasicAuth
-from jinja2 import Environment, FileSystemLoader, select_autoescape
+from app.es import Elasticsearch
 import structlog
-from jsonpath_ng.ext import parse
-import urllib3
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+import yaml
+from app.log import LogLevel
 
-log = structlog.get_logger()
+from app.report import Report
+import typer
+from enum import Enum
 
-hostname = os.getenv("ELASTIC_HOSTNAME")
-verify = os.getenv("SSL_IGNORE_CERTIFICATE", 'True').lower() not in ('true', '1', 't')
-port = os.getenv("ELASTIC_PORT")
+es = Elasticsearch()
 
-username = os.getenv("ELASTIC_USERNAME")
-password = os.getenv("ELASTIC_PASSWORD")
 
-index_name = os.getenv("INDEX_NAME")
+def main(
+        file_path: str = typer.Argument(
+            "data/tests/default.yaml", envvar="FILE_PATH"),
+        include_same_type: bool = typer.Option(
+            False, envvar="INCLUDE_SAME_TYPE"),
+        summarize: bool = typer.Option(True, envvar="SUMMARIZE"),
+        log_level: LogLevel = typer.Option(LogLevel.info, envvar="LOG_LEVEL")
+):
 
-templates_path = os.getenv("TEMPLATES_PATH")
+    structlog.configure(
+        wrapper_class=structlog.make_filtering_bound_logger(
+            LogLevel.to_int(log_level))
+    )
+    log = structlog.get_logger()
 
-auth = HTTPBasicAuth(username, password)
-headers = {
-    "Content-Type": "application/json"
-}
+    log.info("Loading tests...", file_path=file_path)
 
-url = f"https://{hostname}:{port}"
-base_url = url
+    with open(file_path) as f:
+        fields = yaml.safe_load(f)
 
-# test
-resp = requests.get(url, auth=auth, headers=headers, verify=verify)
-assert resp.status_code == 200, "connection refused"
+        report = Report(fields.keys())
 
-env = Environment(
-    loader=FileSystemLoader(templates_path), 
-    autoescape=select_autoescape(default_for_string=True, default=False))
-mapping_template = env.get_template("mapping.txt")
-doc_template = env.get_template("doc.txt")
+        for i, type_i in enumerate(fields.keys()):
+            for j, type_j in enumerate(fields.keys()):
+                values = fields[type_j]
+                report.init_result(i, j, len(values))
 
-field_types = [
-    "integer",
-    "double",
-    "ip"
-]
+                if not include_same_type and i == j:
+                    report.skip_result(i, j)
+                    continue
 
-field_values = [
-    1,
-    2.3,
-    "\"192.168.1.1\""
-]
+                es.delete_index()
+                es.create_index(type_i)
 
-for i, field_type in enumerate(field_types):
-    for j, field_value in enumerate(field_values):
-        if i == j:
-            continue
-        
-        log.info("Trying indexing...", field_type=field_type, field_value=field_value)
-        
-        # NOTE: delete index
-        url = f"{base_url}/{index_name}"
-        resp = requests.delete(url, auth=auth, headers=headers, verify=verify)
-        if resp.status_code >= 400:
-            log.error("Error while deleting index", url=url, resp=resp, index_name=index_name)
-        
-        # NOTE: create index
-        body = mapping_template.render(
-            field_type=field_type
-        )
+                for id, value in enumerate(values):
+                    log.debug("Trying indexing...", type_i=type_i,
+                              type_j=type_j, value=value)
+                    status = es.add_doc(type_i, value, id=id)
 
-        url = f"{base_url}/{index_name}"
-        resp = requests.put(url, auth=auth, headers=headers, verify=verify, data=body)
-        if resp.status_code != 200:
-            log.error("Error while creating mapping", url=url, resp=resp, field_type=field_type)
+                    if status == 201:
+                        report.add_pass_result(i, j)
+                    else:
+                        report.add_fail_result(i, j)
 
-        # NOTE: add doc
-        body = doc_template.render(
-            field_value=field_value
-        )
-        url = f"{base_url}/{index_name}/_doc/1"
-        resp = requests.put(url, auth=auth, headers=headers, verify=verify, data=body)
-        if resp.status_code != 201:
-            log.error("Error while indexing doc", url=url, resp=resp, index_name=index_name, field_type=field_type, field_value=field_value)
-            
-        # NOTE: search results
-        url = f"{base_url}/{index_name}/_search"
-        body = """
-        {
-            "fields": [
-                "*"
-            ],
-            "_source": true
-        }
-        """
-        resp = requests.get(url, auth=auth, headers=headers, verify=verify, data=body)
-        
-        text_resp = resp.text
-        json_resp = json.loads(text_resp)
-        
-        # todo: something is wrong here. request from postman return hits, but not from here
-        
-        # ignored_expr = parse("$.hits.hits[0]._ignored")
-        # res = ignored_expr.find(json_resp)
-        # if res and len(res) > 0:
-        #     log.info("Ignored", result=json_resp)
-        # else:   
-        #     output_expr = parse("$.hits.hits[0].fields.malformed_field")
-        #     res = output_expr.find(json_resp)
-        #     output = res[0]
-        #     log.info("Not ignored", input=field_value, output=output)
+        if summarize:
+            report.summarize()
+        report.markdown_table()
 
+
+if __name__ == "__main__":
+    typer.run(main)

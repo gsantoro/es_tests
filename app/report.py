@@ -14,9 +14,12 @@ class ReportOutput(str, Enum):
     terminal = "TERMINAL"
     file = "FILE"
 
+class ReportFormat(str, Enum):
+    grid = "GRID"
+    github = "GITHUB"
 
 class Report:
-    def __init__(self, columns, output, output_file_path) -> None:
+    def __init__(self, columns, output: ReportOutput, output_file_path: str, report_format: ReportFormat) -> None:
         self.columns = columns
         self.index = [f"type: {c}" for c in self.columns]
 
@@ -25,6 +28,8 @@ class Report:
         
         self.output = output
         self.output_file_path = output_file_path
+        
+        self.report_format = report_format
 
     def summarize(self):
         counts = {
@@ -63,7 +68,8 @@ class Report:
     def markdown_table(self):
         df = pd.DataFrame(self.data, columns=self.columns, index=self.index)
 
-        result = tabulate(df, tablefmt="grid", headers="keys")
+        tablefmt = self.report_format.lower()
+        result = tabulate(df, tablefmt=tablefmt, headers="keys")
 
         if self.output == ReportOutput.file:
             with open(self.output_file_path, "w") as fout:

@@ -17,8 +17,9 @@ def main(
         log_level: LogLevel = typer.Option(LogLevel.info, envvar="LOG_LEVEL"),
         include_curl: bool = typer.Option(False, envvar="INCLUDE_CURL"),
         include_resp: bool = typer.Option(False, envvar="INCLUDE_RESPONSE"),
-        output: ReportOutput = typer.Option("TERMINAL", envvar="OUTPUT"),
-        output_file_path: str = typer.Option("README.md", envvar="OUTPUT_FILE_PATH"),
+        report_output: ReportOutput = typer.Option("TERMINAL", envvar="REPORT_OUTPUT"),
+        report_output_file_path: str = typer.Option("README.md", envvar="REPORT_OUTPUT_FILE_PATH"),
+        report_format: str = typer.Option("GITHUB", envvar="REPORT_FORMAT"),
 ):
     es = Elasticsearch(log_level, include_curl, include_resp)
 
@@ -33,7 +34,7 @@ def main(
     with open(file_path) as f:
         mappings = yaml.safe_load(f)
 
-        report = Report(mappings.keys(), output, output_file_path)
+        report = Report(mappings.keys(), report_output, report_output_file_path, report_format)
 
         for i, mapping_type in enumerate(mappings.keys()):
             log.debug("New mapping type", mapping_type=mapping_type)

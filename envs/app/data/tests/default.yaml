@@ -1,5 +1,5 @@
-# "integer":
-#     - 1
+"integer":
+    - 1
 # "keyword":
 #     - "\"foo\""
 #     - '["foo", "foo", "bar", "baz"]'
@@ -7,7 +7,7 @@
     - "\"jumped over the lazy dog\""
 # "match_only_text":
 #     - "\"jumped over the lazy dog\""
-# "integer_range":
-#     - '{"gte":10,"lt":20}'
+"integer_range":
+    - '{"gte":10,"lt":20}'
 "object":
     - '{"age":30,"name":{"first":"John","last":"Smith"}}'

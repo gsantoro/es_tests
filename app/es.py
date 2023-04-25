@@ -1,3 +1,4 @@
+from jsonpath_ng import jsonpath, parse
 import os
 from requests.auth import HTTPBasicAuth
 import requests
@@ -6,17 +7,18 @@ import structlog
 import curl
 from structlog.contextvars import (
     bind_contextvars,
-    merge_contextvars,
+    # merge_contextvars,
     clear_contextvars,
 )
 from app.log import LogLevel
+from app.report import TestStatus
 
 from app.template import Templates
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 class Elasticsearch:
-    def __init__(self, log_level, enable_curl, include_resp) -> None:
+    def __init__(self, templates: Templates, log_level, enable_curl, include_resp) -> None:
         hostname = os.getenv("ELASTIC_HOSTNAME")
         self.verify = os.getenv("SSL_IGNORE_CERTIFICATE",
                                 'True').lower() not in ('true', '1', 't')
@@ -49,11 +51,11 @@ class Elasticsearch:
         )
         self.log = structlog.get_logger("es")
         clear_contextvars()
-        
+
         self.include_resp = include_resp
         self.enable_curl = enable_curl
 
-        self.templates = Templates()
+        self.templates = templates
 
     def _add_extra_context(self, resp):
         if self.include_resp:
@@ -68,6 +70,9 @@ class Elasticsearch:
                             auth=self.auth,
                             headers=self.headers,
                             verify=self.verify)
+        
+        resp.raise_for_status()
+        
         assert resp.status_code == 200, "connection refused"
 
     def delete_index(self):
@@ -77,6 +82,8 @@ class Elasticsearch:
                                headers=self.headers,
                                verify=self.verify)
 
+        resp.raise_for_status()
+
         clear_contextvars()
         self._add_extra_context(resp)
 
@@ -84,14 +91,14 @@ class Elasticsearch:
             self.log.error("Error while deleting index")
         else:
             self.log.debug("Index deleted")
-            
+
         clear_contextvars()
         return resp.status_code
 
     def create_index(self, mapping_type):
         body = self.templates.mapping_template.render(
             mapping_type=mapping_type
-        )
+        ).replace("\n", "").replace(" ", "")
 
         clear_contextvars()
         bind_contextvars(mapping_type=mapping_type)
@@ -103,6 +110,8 @@ class Elasticsearch:
                             verify=self.verify,
                             data=body)
 
+        resp.raise_for_status()
+
         self._add_extra_context(resp)
 
         if resp.status_code != 200:
@@ -113,10 +122,10 @@ class Elasticsearch:
         clear_contextvars()
         return resp.status_code
 
-    def add_doc(self, mapping_type, runtime_type, value, id=1):
+    def add_doc(self, mapping_type, runtime_type, value, id=1) -> TestStatus:
         body = self.templates.doc_template.render(
             value=value
-        )
+        ).replace("\n", "").replace(" ", "")
 
         clear_contextvars()
         bind_contextvars(mapping_type=mapping_type,
@@ -125,7 +134,7 @@ class Elasticsearch:
 
         self.log.debug("Trying indexing...")
 
-        url = f"{self.base_url}/{self.index_name}/_doc/{id}"
+        url = f"{self.base_url}/{self.index_name}/_doc/{id}?refresh"
         resp = requests.put(url,
                             auth=self.auth,
                             headers=self.headers,
@@ -134,10 +143,35 @@ class Elasticsearch:
 
         self._add_extra_context(resp)
 
-        if resp.status_code != 201:
-            self.log.error("Error while indexing doc")
-        else:
-            self.log.debug("Object indexed")
+        result = TestStatus.skipped, 0
+
+        if resp.status_code not in [201, 200]:
+            self.log.error("Failed indexing doc")
+            result = TestStatus.failed
+        elif resp.status_code == 201 or resp.status_code == 200:
+            self.log.debug("Object indexed correctly")
+            result = TestStatus.passed
 
         clear_contextvars()
-        return resp.status_code
+        return result
+
+    def how_many_ignored(self) -> int:
+        url = f"{self.base_url}/{self.index_name}/_search"
+        body = {"query":{"exists":{"field":"_ignored"}}}
+
+        resp = requests.get(url,
+                            auth=self.auth,
+                            headers=self.headers,
+                            verify=self.verify,
+                            json=body)
+
+        resp.raise_for_status()
+
+        json_resp = resp.json()
+
+        hits_expr = parse("$.hits.total.value")
+        number_hits = hits_expr.find(json_resp)
+        if number_hits:
+            return number_hits[0].value
+        else:
+            return 0

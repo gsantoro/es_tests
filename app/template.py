@@ -2,11 +2,7 @@ import os
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 class Templates:
-    def __init__(self) -> None:
-        templates_path = os.getenv("TEMPLATES_PATH")
-        mapping_template_name = os.getenv("MAPPING_TEMPLATE_NAME")
-        doc_template_name = os.getenv("DOC_TEMPLATE_NAME")
-
+    def __init__(self, templates_path, mapping_template_name, doc_template_name) -> None:
         env = Environment(
             loader=FileSystemLoader(templates_path), 
             autoescape=select_autoescape(default_for_string=True, default=False))

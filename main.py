@@ -3,7 +3,7 @@ import structlog
 import yaml
 from app.log import LogLevel
 
-from app.report import Report
+from app.report import ReportOutput, Report
 import typer
 from enum import Enum
 
@@ -15,10 +15,12 @@ def main(
             False, envvar="INCLUDE_SAME_TYPE"),
         summarize: bool = typer.Option(True, envvar="SUMMARIZE"),
         log_level: LogLevel = typer.Option(LogLevel.info, envvar="LOG_LEVEL"),
-        enable_curl: bool = typer.Option(False, envvar="ENABLE_CURL"),
+        include_curl: bool = typer.Option(False, envvar="INCLUDE_CURL"),
         include_resp: bool = typer.Option(False, envvar="INCLUDE_RESPONSE"),
+        output: ReportOutput = typer.Option("TERMINAL", envvar="OUTPUT"),
+        output_file_path: str = typer.Option("README.md", envvar="OUTPUT_FILE_PATH"),
 ):
-    es = Elasticsearch(log_level, enable_curl, include_resp)
+    es = Elasticsearch(log_level, include_curl, include_resp)
 
     structlog.configure(
         wrapper_class=structlog.make_filtering_bound_logger(
@@ -31,7 +33,7 @@ def main(
     with open(file_path) as f:
         mappings = yaml.safe_load(f)
 
-        report = Report(mappings.keys())
+        report = Report(mappings.keys(), output, output_file_path)
 
         for i, mapping_type in enumerate(mappings.keys()):
             log.debug("New mapping type", mapping_type=mapping_type)

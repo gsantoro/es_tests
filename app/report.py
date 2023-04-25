@@ -1,21 +1,30 @@
+from enum import Enum
 import pandas as pd
 from tabulate import tabulate
 
 
-class Symbols:
+class Symbols(str, Enum):
     test_skip = "◻️"
     test_pass = "✅"
     test_fail = "❌"
     test_partial_fail = "❓"
 
 
+class ReportOutput(str, Enum):
+    terminal = "TERMINAL"
+    file = "FILE"
+
+
 class Report:
-    def __init__(self, columns) -> None:
+    def __init__(self, columns, output, output_file_path) -> None:
         self.columns = columns
         self.index = [f"type: {c}" for c in self.columns]
 
         self.n = len(self.columns)
         self.data = [None] * self.n
+        
+        self.output = output
+        self.output_file_path = output_file_path
 
     def summarize(self):
         counts = {
@@ -54,7 +63,13 @@ class Report:
     def markdown_table(self):
         df = pd.DataFrame(self.data, columns=self.columns, index=self.index)
 
-        print(tabulate(df, tablefmt="grid", headers="keys"))
+        result = tabulate(df, tablefmt="grid", headers="keys")
+
+        if self.output == ReportOutput.file:
+            with open(self.output_file_path, "w") as fout:
+                fout.write(result)
+        else:
+            print(result)
 
     def init_result(self, i, j, total):
         if not self.data[i]:

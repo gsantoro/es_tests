@@ -1,3 +1,4 @@
+import logging
 from jsonpath_ng import jsonpath, parse
 import os
 from requests.auth import HTTPBasicAuth
@@ -10,7 +11,7 @@ from structlog.contextvars import (
     # merge_contextvars,
     clear_contextvars,
 )
-from app.log import LogLevel
+from app.log import LogLevel, LogRenderer
 from app.report import TestStatus
 
 from app.template import Templates
@@ -18,7 +19,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 class Elasticsearch:
-    def __init__(self, templates: Templates, log_level, enable_curl, include_resp) -> None:
+    def __init__(self, templates: Templates, log_level, log_renderer, enable_curl, include_resp) -> None:
         hostname = os.getenv("ELASTIC_HOSTNAME")
         self.verify = os.getenv("SSL_IGNORE_CERTIFICATE",
                                 'True').lower() not in ('true', '1', 't')
@@ -46,10 +47,11 @@ class Elasticsearch:
                 structlog.processors.StackInfoRenderer(),
                 structlog.dev.set_exc_info,
                 structlog.processors.TimeStamper(),
-                structlog.dev.ConsoleRenderer(),
+                LogRenderer.to_processor(log_renderer),
             ]
         )
         self.log = structlog.get_logger("es")
+
         clear_contextvars()
 
         self.include_resp = include_resp
@@ -70,9 +72,9 @@ class Elasticsearch:
                             auth=self.auth,
                             headers=self.headers,
                             verify=self.verify)
-        
+
         resp.raise_for_status()
-        
+
         assert resp.status_code == 200, "connection refused"
 
     def delete_index(self):
@@ -82,7 +84,7 @@ class Elasticsearch:
                                headers=self.headers,
                                verify=self.verify)
 
-        resp.raise_for_status()
+        # resp.raise_for_status()
 
         clear_contextvars()
         self._add_extra_context(resp)
@@ -157,7 +159,7 @@ class Elasticsearch:
 
     def how_many_ignored(self) -> int:
         url = f"{self.base_url}/{self.index_name}/_search"
-        body = {"query":{"exists":{"field":"_ignored"}}}
+        body = {"query": {"exists": {"field": "_ignored"}}}
 
         resp = requests.get(url,
                             auth=self.auth,

@@ -1,7 +1,7 @@
 from app.es import Elasticsearch
 import structlog
 import yaml
-from app.log import LogLevel
+from app.log import LogLevel, LogRenderer
 
 from app.report import ReportOutput, Report, TestStatus
 import typer
@@ -17,6 +17,7 @@ def main(
             False, envvar="INCLUDE_SAME_TYPE", help="If you want to test <mapping_type>/<mapping_type> (eg. int/int)"),
         summarize: bool = typer.Option(True, envvar="SUMMARIZE", help="Wether to summarize the test from multiple values into a single status"),
         log_level: LogLevel = typer.Option(LogLevel.info, envvar="LOG_LEVEL"),
+        log_renderer: LogRenderer = typer.Option(LogRenderer.console, envvar="LOG_RENDERER"),
         include_curl: bool = typer.Option(False, envvar="INCLUDE_CURL", help="Whether to include the curl command in logs"),
         include_resp: bool = typer.Option(False, envvar="INCLUDE_RESPONSE", help="Whether to include the json response in logs"),
         report_output: ReportOutput = typer.Option("TERMINAL", envvar="REPORT_OUTPUT", help="Where to send the report output"),
@@ -27,7 +28,7 @@ def main(
         doc_template_name: str = typer.Option("doc.txt", envvar="DOC_TEMPLATE_NAME", help="Name of the doc template to use"),
 ):
     templates = Templates(templates_path, mapping_template_name, doc_template_name)
-    es = Elasticsearch(templates, log_level, include_curl, include_resp)
+    es = Elasticsearch(templates, log_level, log_renderer, include_curl, include_resp)
 
     structlog.configure(
         wrapper_class=structlog.make_filtering_bound_logger(
@@ -75,7 +76,7 @@ def main(
         if summarize:
             counts = report.summarize()
             log.info("Counts", counts=counts)
-        report.print_table()
+        report.print_results()
 
 
 if __name__ == "__main__":

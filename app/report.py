@@ -76,27 +76,39 @@ class Report:
 
         return counts
 
-    def print_table(self):
+    def get_legend(self):
+        result = "Legend:\n"
+        result += "\n".join([f"- {name}: {value}" for name,
+                   value in TestStatus.__members__.items()])
+        return result
+
+    def print_results(self):
         df = pd.DataFrame(self.data, columns=self.columns, index=self.index)
 
         tablefmt = self.report_format.lower()
         result = tabulate(df, tablefmt=tablefmt, headers="keys")
 
+        legend = self.get_legend()
+
         if self.output == ReportOutput.file:
             with open(self.output_file_path, "w") as fout:
                 fout.write(result)
+                fout.write("\n\n")
+                fout.write(legend)
         else:
             print(result)
+            print("\n\n")
+            print(legend)
 
     def init_result(self, i, j, total):
         if not self.data[i]:
             self.data[i] = [None] * self.n
 
         if not self.data[i][j]:
-            self.data[i][j] = {"pass": 0, 
+            self.data[i][j] = {"pass": 0,
                                "fail": 0,
-                               "skip": 0, 
-                               "ignore": 0, 
+                               "skip": 0,
+                               "ignore": 0,
                                "total": total}
 
     def add_pass_result(self, i, j):

@@ -1,5 +1,7 @@
 from enum import Enum
 
+import structlog
+
 
 class LogLevel(str, Enum):
     critical = "CRITICAL"
@@ -26,4 +28,15 @@ class LogLevel(str, Enum):
         if level == LogLevel.critical or level == LogLevel.fatal:
             return 50
         
+
+class LogRenderer(str, Enum):
+    console = "CONSOLE"
+    json = "JSON"
+    
+    @staticmethod
+    def to_processor(renderer: "LogRenderer") :
+        if renderer == LogRenderer.console:
+            return structlog.dev.ConsoleRenderer()
+        
+        return structlog.processors.JSONRenderer()
         

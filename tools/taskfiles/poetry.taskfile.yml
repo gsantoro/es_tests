@@ -16,7 +16,8 @@ tasks:
   run:
     dir: '{{.USER_WORKING_DIR}}'
     cmds:
-      - poetry run python {{.APPLICATION_PATH}}
+      - poetry run python {{.APPLICATION_PATH}} | tee {{.LOG_PATH}}
+
 
   shell:
     dir: '{{.USER_WORKING_DIR}}'

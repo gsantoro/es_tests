@@ -9,6 +9,7 @@
   ];
 
   devcontainer.enable = true;
+  devcontainer.settings.image = "ghcr.io/gsantoro/devenv:latest";
 
   languages.go.enable = true;
 

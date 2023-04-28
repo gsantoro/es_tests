@@ -1,22 +1,24 @@
 # Readme
 
-Results from the tests are available under the folder `reports`:
-- 
+This project is an attempt to test the effect of introducing the parameter `ignore_malformed` to the default template settings in Elasticsearch.
 
-## Legend
-- skipped = "◻"
-  - skipped tests. This can be controlled by `INCLUDE_SAME_TYPE`
-- passed = "☀️"
-  - indexing worked for all values for this combination of mapping type and runtime type without ignored fields
-- ignored = "🌤️"
-  - no failures but some values were ignored
-- failed = "⛈️"
-  - indexing failed for all values combination of mapping type and runtime type 
-- partially_failed = "☁️"
-  - some values for this type failed, some others might have passed or may have been ignored
+## How to run
 
+This project has many requirements. The easiest way to develop without installing all those requirements is using VSCode as suggested [here](https://code.visualstudio.com/docs/devcontainers/containers).
+In short from inside VScode you can clone this github repo into a named container volume to develop inside a devcontainer.
+
+Once you have your devcontainer running you need to issue the following commands:
+
+```bash
+cd envs/app  # loads env environment thanks to direnv
+task elastic:up  # start elastic stack using elastic-package in a docker container
+task poetry:run  # run the report
+```
+
+you can customize different parameters by changing the environment variables defined at `envs/app/.env`
 
 ## Usage
+
 ```bash
 Usage: main.py [OPTIONS] [FILE_PATH]
 
@@ -35,6 +37,8 @@ Options:
                                   SUMMARIZE; default: summarize]
   --log-level [CRITICAL|FATAL|ERROR|WARNING|WARN|INFO|DEBUG|NOTSET]
                                   [env var: LOG_LEVEL; default: LogLevel.info]
+  --log-renderer [CONSOLE|JSON]   [env var: LOG_RENDERER; default:
+                                  LogRenderer.console]
   --include-curl / --no-include-curl
                                   Whether to include the curl command in logs
                                   [env var: INCLUDE_CURL; default: no-include-
@@ -62,17 +66,51 @@ Options:
   --help                          Show this message and exit.
 ```
 
+## Reports
 
-## Findings
+Multiple reports can be found at `./reports/*.md` and the corresponding logs are at `./logs/*.log`.
+
+These are the current results
+
 - everything with `ignore_malformed=true`
+
   - mapping: `envs/app/data/templates/ignore_malformed.mapping.txt`
   - test: `envs/app/data/tests/everything.yaml`
   - report: `reports/everything.ignore_malformed.md`
-  - summary: `{'pass': 97, 'fail': 138, 'ignore': 108, 'partial_fail': 37, 'skip': 20, 'total': 400}`
-
+  - summary: `{"pass": 115, "fail": 210, "ignore": 139, "partial_fail": 42, "skip": 23, "total": 529}`
 
 - everything with no settings
   - mapping: `envs/app/data/templates/no_settings.mapping.txt`
   - test: `envs/app/data/tests/everything.yaml`
   - report: `reports/everything.no_settings.md`
-  - summary: `{'pass': 97, 'fail': 241, 'ignore': 0, 'partial_fail': 42, 'skip': 20, 'total': 400}`
+  - summary: `{"pass": 115, "fail": 343, "ignore": 0, "partial_fail": 48, "skip": 23, "total": 529}`
+
+From all the available Elasticsearch [types](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-types.html), these are the types that I have skipped from the current test and the reason for skipping them
+
+these types are mostly redundant since we test similar types
+
+- long
+- short
+- float
+- half_float
+- scaled_float
+- unsigned_logs
+- long_range
+- double_range
+- shape
+- geo_shape
+
+the following instead are either hard to test (like they require a special plugin or they need a special config) or not very common
+
+- alias
+- join
+- murmur3
+- aggregate_metric_double
+- annotated-text
+- completion
+- search_as_you_type
+- token_count
+- dense_vector
+- rank_feature
+- rank_features
+- percolator

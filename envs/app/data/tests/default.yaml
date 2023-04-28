@@ -1,13 +1,24 @@
 "integer":
     - 1
-"keyword":
-    - "\"foo\""
-    - '["foo", "foo", "bar", "baz"]'
-"text":
-    - "\"jumped over the lazy dog\""
-# "match_only_text":
-#     - "\"jumped over the lazy dog\""
-# "integer_range":
-#     - '{"gte":10,"lt":20}'
-# "object":
-#     - '{"age":30,"name":{"first":"John","last":"Smith"}}'
+    - -1
+    - 0
+"date": 
+    - 1420070400001
+    - "\"2015-01-01T12:10:30Z\""
+    - "\"2015-01-01\""
+"date_nanos": 
+    - 1420070400000
+    - "\"2015-01-01T12:10:30.123456789Z\""
+    - "\"2015-01-01\""
+"ip": 
+    - "\"192.168.1.1\""
+    - "\"192.168.0.0/16\""
+    - "\"2001:db8::/48\""
+    - "\"2001:db8::1:0:0:1\""
+"ip_range":
+    - "\"192.168.0.0/16\""
+"date_range":
+    - '{"gte":"2015-10-31 12:00:00","lte": "2015-11-01"}'
+"object":
+    - '{"age":30,"name":{"first":"John","last":"Smith"}}'
+    - '{"age":30,"name.first":"John","name.last":"Smith"}'

@@ -84,8 +84,6 @@ class Elasticsearch:
                                headers=self.headers,
                                verify=self.verify)
 
-        # resp.raise_for_status()
-
         clear_contextvars()
         self._add_extra_context(resp)
 
@@ -111,8 +109,6 @@ class Elasticsearch:
                             headers=self.headers,
                             verify=self.verify,
                             data=body)
-
-        resp.raise_for_status()
 
         self._add_extra_context(resp)
 

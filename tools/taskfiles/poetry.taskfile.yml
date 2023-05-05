@@ -1,35 +1,28 @@
 # https://taskfile.dev
 
-version: '3'
+version: "3"
 
 tasks:
   init:
-    dir: '{{.USER_WORKING_DIR}}'
     cmds:
       - poetry init
 
   info:
-    dir: '{{.USER_WORKING_DIR}}'
     cmds:
       - poetry env info
 
   run:
-    dir: '{{.USER_WORKING_DIR}}'
     cmds:
       - poetry run python {{.APPLICATION_PATH}} | tee {{.LOG_PATH}}
 
-
   shell:
-    dir: '{{.USER_WORKING_DIR}}'
     cmds:
       - poetry shell
 
   add:
-    dir: '{{.USER_WORKING_DIR}}'
     cmds:
       - poetry add {{.CLI_ARGS}}
 
   add-dev-package:
-    dir: '{{.USER_WORKING_DIR}}'
     cmds:
       - poetry add --group dev {{.CLI_ARGS}}

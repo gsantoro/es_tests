@@ -1,0 +1,15 @@
+{
+    "settings": {
+        "index.mapping.ignore_malformed": true
+    },
+    "mappings": {
+        "_source": {
+            "mode": "synthetic"
+        },
+        "properties": {
+            "malformed_field": {
+                "type": "{{ mapping_type }}"
+            }
+        }
+    }
+}

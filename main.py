@@ -59,7 +59,12 @@ def main(
                     continue
 
                 es.delete_index()
-                es.create_index(mapping_type)
+                    
+                resp_status_code = es.create_index(mapping_type)
+                if resp_status_code >= 300:
+                    for _, _ in enumerate(values):
+                        report.add_fail_result(i, j)
+                    continue
 
                 for id, value in enumerate(values):
                     test_status  = es.add_doc(mapping_type, runtime_type, value, id)

@@ -3,6 +3,10 @@
 version: '3'
 
 tasks:
+  default:
+    cmds:
+      - task: up
+
   up:
     desc: Bring up elastic stack via elastic-package but first it destroys any previous running cluster
     deps: 

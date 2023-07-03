@@ -9,6 +9,31 @@ includes:
   poetry: tools/taskfiles/poetry.taskfile.yml
 
 tasks:
+  # Note: Run from one of the folders with .envrc (eg. `envs/default.ignore_malformed`)
   default:
     cmds:
       - task: poetry:run
+
+  # Note: Run fro root folder
+  test:
+    cmds:
+      - direnv exec envs/{{.TEST}}/ task poetry:run
+
+  # Note: Run fro root folder
+  all:
+    cmds:
+      - task: test
+        vars: 
+          TEST: default.ignore_malformed
+      - task: test
+        vars: 
+          TEST: default.synthetic-ignore_malformed
+      - task: test
+        vars: 
+          TEST: everything.ignore_malformed
+      - task: test
+        vars: 
+          TEST: everything.no_settings
+      - task: test
+        vars: 
+          TEST: everything.synthetic-ignore_malformed

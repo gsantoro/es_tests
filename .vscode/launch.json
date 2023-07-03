@@ -5,21 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Current File",
+            "name": "Debug",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/main.py",
-            "envFile": "${workspaceFolder}/envs/elastic/.env",
-            "env": {
-                "TEMPLATES_PATH": "data/templates",
-                "FILE_PATH": "data/tests/default.yaml",
-                "MAPPING_TEMPLATE_NAME": "ignore_malformed.synthetic.mapping.txt",
-                "LOG_PATH": "./logs/default.synthetic.ignore_malformed.log",
-                "INCLUDE_SAME_TYPE": "True",
-                "INCLUDE_RESPONSE": "True",
-                "LOG_LEVEL": "DEBUG",
-            },
+            "envFile": "${workspaceFolder}/data/tmp/debug.env",
             "console": "integratedTerminal",
+            "preLaunchTask": "default.ignore_malformed",  // load environment variables into debug.env
             "justMyCode": true
         }
     ]

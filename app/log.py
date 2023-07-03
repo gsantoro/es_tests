@@ -12,7 +12,7 @@ class LogLevel(str, Enum):
     info = "INFO"
     debug = "DEBUG"
     notset = "NOTSET"
-    
+
     @staticmethod
     def to_int(level: "LogLevel") -> int:
         if level == LogLevel.notset:
@@ -27,16 +27,32 @@ class LogLevel(str, Enum):
             return 40
         if level == LogLevel.critical or level == LogLevel.fatal:
             return 50
-        
+
 
 class LogRenderer(str, Enum):
     console = "CONSOLE"
     json = "JSON"
-    
+
     @staticmethod
-    def to_processor(renderer: "LogRenderer") :
+    def to_processor(renderer: "LogRenderer"):
         if renderer == LogRenderer.console:
             return structlog.dev.ConsoleRenderer()
-        
-        return structlog.processors.JSONRenderer()
-        
+
+        return structlog.processors.JSONRenderer(sort_keys=True)
+
+
+class LogBuilder:
+    @staticmethod
+    def configure(log_level, log_renderer):
+        structlog.configure(
+            wrapper_class=structlog.make_filtering_bound_logger(
+                LogLevel.to_int(log_level)),
+            processors=[
+                structlog.contextvars.merge_contextvars,
+                structlog.processors.add_log_level,
+                structlog.processors.StackInfoRenderer(),
+                structlog.dev.set_exc_info,
+                structlog.processors.TimeStamper(),
+                LogRenderer.to_processor(log_renderer),
+            ]
+        )

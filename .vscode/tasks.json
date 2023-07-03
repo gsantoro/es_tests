@@ -1,0 +1,32 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "default.ignore_malformed",
+            "type": "shell",
+            "command": "direnv exec envs/default.ignore_malformed/ env > data/tmp/debug.env"
+        },
+        {
+            "label": "default.synthetic-ignore_malformed",
+            "type": "shell",
+            "command": "direnv exec envs/default.synthetic-ignore_malformed/ env > data/tmp/debug.env"
+        },
+        {
+            "label": "everything.ignore_malformed",
+            "type": "shell",
+            "command": "direnv exec envs/everything.ignore_malformed/ env > data/tmp/debug.env"
+        },
+        {
+            "label": "everything.no_settings",
+            "type": "shell",
+            "command": "direnv exec envs/everything.no_settings/ env > data/tmp/debug.env"
+        },
+        {
+            "label": "everything.synthetic-ignore_malformed",
+            "type": "shell",
+            "command": "direnv exec envs/everything.synthetic-ignore_malformed/ env > data/tmp/debug.env"
+        }
+    ]
+}

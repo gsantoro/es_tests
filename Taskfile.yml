@@ -7,3 +7,8 @@ includes:
   direnv: tools/taskfiles/direnv.taskfile.yml
   elastic: tools/taskfiles/elastic.taskfile.yml
   poetry: tools/taskfiles/poetry.taskfile.yml
+
+tasks:
+  default:
+    cmds:
+      - task: poetry:run

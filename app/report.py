@@ -15,30 +15,16 @@ class TestStatus(str, Enum):
     partially_failed = "☁️"
 
 
-class ReportOutput(str, Enum):
-    terminal = "TERMINAL"
-    file = "FILE"
-
-
-class ReportFormat(str, Enum):
-    grid = "GRID"
-    github = "GITHUB"
-
-
 class Report:
-    def __init__(self, columns, output: ReportOutput, output_file_path: str, report_format: ReportFormat) -> None:
+    def __init__(self, columns) -> None:
         self.columns = columns
-        self.index = [f"type: {c}" for c in self.columns]
+        self.index = [c for c in self.columns]
 
         self.n = len(self.columns)
         self.data = [None] * self.n
 
-        self.output = output
-        self.output_file_path = output_file_path
-
-        self.report_format = report_format
-
-    def summarize(self):
+    def _summarize_results(self, data):
+        summary = [None] * self.n
         counts = {
             "pass": 0,
             "fail": 0,
@@ -49,77 +35,85 @@ class Report:
         }
 
         for i in range(self.n):
+            if not summary[i]:
+                summary[i] = [None] * self.n  # init a new row
+            
             for j in range(self.n):
-                results = self.data[i][j]
-                total = results["total"]
-                skip = results["skip"]
+                cell = data[i][j]
+                total = cell["total"]
+                skip = cell["skip"]
 
                 counts["total"] += 1
 
                 if skip > 0:
-                    self.data[i][j] = TestStatus.skipped
+                    summary[i][j] = TestStatus.skipped
                     counts["skip"] += 1
                     continue
 
-                if results["pass"] == total - skip:  # NOTE: all passed. none ignored
-                    self.data[i][j] = TestStatus.passed
+                not_skipped = total - skip
+
+                if cell["pass"] == not_skipped:  # NOTE: all passed. none ignored
+                    summary[i][j] = TestStatus.passed
                     counts["pass"] += 1
-                elif results["fail"] == total - skip:  # NOTE: all failed. none ignored
-                    self.data[i][j] = TestStatus.failed
+                elif cell["fail"] == not_skipped:  # NOTE: all failed. none ignored
+                    summary[i][j] = TestStatus.failed
                     counts["fail"] += 1
-                elif results["fail"] == 0 and results["ignore"] > 0:
-                    self.data[i][j] = TestStatus.ignored
+                elif cell["fail"] == 0 and cell["ignore"] > 0:
+                    summary[i][j] = TestStatus.ignored
                     counts["ignore"] += 1
                 else:
-                    self.data[i][j] = TestStatus.partially_failed
+                    summary[i][j] = TestStatus.partially_failed
                     counts["partial_fail"] += 1
 
-        return counts
+        return summary, counts
 
     def get_legend(self):
         result = "Legend:\n"
         result += "\n".join([f"- {name}: {value}" for name,
-                   value in TestStatus.__members__.items()])
+                             value in TestStatus.__members__.items()])
         return result
 
-    def print_results(self):
-        df = pd.DataFrame(self.data, columns=self.columns, index=self.index)
+    def summarize(self, output_file_path: str):
+        summary, counts = self._summarize_results(self.data)
+        df = pd.DataFrame(summary, columns=self.columns, index=self.index)
 
-        tablefmt = self.report_format.lower()
-        result = tabulate(df, tablefmt=tablefmt, headers="keys")
+        result = tabulate(df, tablefmt="github", headers="keys")
 
         legend = self.get_legend()
 
-        if self.output == ReportOutput.file:
-            with open(self.output_file_path, "w") as fout:
-                fout.write(result)
-                fout.write("\n\n")
-                fout.write(legend)
-        else:
-            print(result)
-            print("\n\n")
-            print(legend)
+        with open(output_file_path, "w") as fout:
+            fout.write(result)
+            fout.write("\n\n")
+            fout.write(legend)
+            
+        return counts
+
+
+    def save_to_json(self, output_file_path: str):
+        df = pd.DataFrame(self.data, columns=self.columns, index=self.index)
+        df.to_json(output_file_path)
 
     def init_result(self, i, j, total):
         if not self.data[i]:
-            self.data[i] = [None] * self.n
+            self.data[i] = [None] * self.n  # init a new row
 
         if not self.data[i][j]:
+            # init a cell in n x n matrix
             self.data[i][j] = {"pass": 0,
                                "fail": 0,
                                "skip": 0,
                                "ignore": 0,
                                "total": total}
 
-    def add_pass_result(self, i, j):
-        self.data[i][j]["pass"] += 1
+    def add_pass_result(self, i, j, n=1):
+        self.data[i][j]["pass"] += n
 
-    def add_fail_result(self, i, j):
-        self.data[i][j]["fail"] += 1
+    def add_fail_result(self, i, j, n=1):
+        self.data[i][j]["fail"] += n
 
-    def add_skip_result(self, i, j):
-        self.data[i][j]["skip"] += 1
+    def add_skip_result(self, i, j, n=1):
+        self.data[i][j]["skip"] += n
 
-    def add_ignored_result(self, i, j, number_ignored):
-        self.data[i][j]["pass"] -= number_ignored
-        self.data[i][j]["ignore"] += number_ignored
+    def add_ignored_result(self, i, j, n=1):
+        self.data[i][j]["pass"] -= n
+        self.data[i][j]["ignore"] += n

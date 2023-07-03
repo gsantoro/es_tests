@@ -3,11 +3,6 @@
 version: '3'
 
 tasks:
-  elastic-package:
-    desc: Install elastic-package
-    cmds:
-      - go install github.com/elastic/elastic-package@latest
-
   up:
     desc: Bring up elastic stack via elastic-package but first it destroys any previous running cluster
     deps: 
@@ -17,8 +12,6 @@ tasks:
 
   down:
     desc: Bring down elastic stack
-    deps:
-      - elastic-package
     cmds:
       - elastic-package stack down
     ignore_error: true

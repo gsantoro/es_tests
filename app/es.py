@@ -11,7 +11,7 @@ from structlog.contextvars import (
     # merge_contextvars,
     clear_contextvars,
 )
-from app.log import LogLevel, LogRenderer
+from app.log import LogBuilder, LogLevel, LogRenderer
 from app.report import TestStatus
 
 from app.template import Templates
@@ -37,19 +37,7 @@ class Elasticsearch:
 
         self.base_url = f"https://{hostname}:{port}"
 
-        self.log_level = log_level
-        structlog.configure(
-            wrapper_class=structlog.make_filtering_bound_logger(
-                LogLevel.to_int(self.log_level)),
-            processors=[
-                structlog.contextvars.merge_contextvars,
-                structlog.processors.add_log_level,
-                structlog.processors.StackInfoRenderer(),
-                structlog.dev.set_exc_info,
-                structlog.processors.TimeStamper(),
-                LogRenderer.to_processor(log_renderer),
-            ]
-        )
+        LogBuilder.configure(log_level=log_level, log_renderer=log_renderer)
         self.log = structlog.get_logger("es")
 
         clear_contextvars()

@@ -1,0 +1,359 @@
+{
+    "integer": {
+        "integer": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 3,
+            "ignore": 0,
+            "total": 3
+        },
+        "date": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 3
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "object": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        }
+    },
+    "date": {
+        "integer": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 3
+        },
+        "date": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 3,
+            "ignore": 0,
+            "total": 3
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 3
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "object": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        }
+    },
+    "date_nanos": {
+        "integer": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 3
+        },
+        "date": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 3,
+            "ignore": 0,
+            "total": 3
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 3
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "object": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        }
+    },
+    "ip": {
+        "integer": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 4,
+            "total": 4
+        },
+        "date": {
+            "pass": 0,
+            "fail": 4,
+            "skip": 0,
+            "ignore": 0,
+            "total": 4
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 4,
+            "skip": 0,
+            "ignore": 0,
+            "total": 4
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 4,
+            "ignore": 0,
+            "total": 4
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 4,
+            "skip": 0,
+            "ignore": 0,
+            "total": 4
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 4,
+            "skip": 0,
+            "ignore": 0,
+            "total": 4
+        },
+        "object": {
+            "pass": 0,
+            "fail": 4,
+            "skip": 0,
+            "ignore": 0,
+            "total": 4
+        }
+    },
+    "ip_range": {
+        "integer": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "date": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 1,
+            "ignore": 0,
+            "total": 1
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "object": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        }
+    },
+    "date_range": {
+        "integer": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 1,
+            "ignore": 0,
+            "total": 1
+        },
+        "object": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        }
+    },
+    "object": {
+        "integer": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "date": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "object": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 2,
+            "ignore": 0,
+            "total": 2
+        }
+    }
+}

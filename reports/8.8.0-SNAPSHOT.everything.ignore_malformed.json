@@ -1,0 +1,3751 @@
+{
+    "integer": {
+        "integer": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 3,
+            "ignore": 0,
+            "total": 3
+        },
+        "double": {
+            "pass": 3,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "byte": {
+            "pass": 3,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "keyword": {
+            "pass": 3,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "constant_keyword": {
+            "pass": 1,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "wildcard": {
+            "pass": 3,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "date": {
+            "pass": 3,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "date_nanos": {
+            "pass": 2,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 3
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 3
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "binary": {
+            "pass": 3,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "boolean": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 3
+        },
+        "text": {
+            "pass": 3,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "match_only_text": {
+            "pass": 3,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "integer_range": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "object": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "flattened": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "nested": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 3
+        },
+        "geo_point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 3
+        },
+        "version": {
+            "pass": 3,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "histogram": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 3
+        }
+    },
+    "double": {
+        "integer": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "double": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 1,
+            "ignore": 0,
+            "total": 1
+        },
+        "byte": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "keyword": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "constant_keyword": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "wildcard": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "binary": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "boolean": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "text": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "match_only_text": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "integer_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "object": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "flattened": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "nested": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "geo_point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "version": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "histogram": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        }
+    },
+    "byte": {
+        "integer": {
+            "pass": 2,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "double": {
+            "pass": 2,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "byte": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 2,
+            "ignore": 0,
+            "total": 2
+        },
+        "keyword": {
+            "pass": 2,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "constant_keyword": {
+            "pass": 1,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "wildcard": {
+            "pass": 2,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "date": {
+            "pass": 2,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "date_nanos": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 2
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 2,
+            "total": 2
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "binary": {
+            "pass": 2,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "boolean": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 2,
+            "total": 2
+        },
+        "text": {
+            "pass": 2,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "match_only_text": {
+            "pass": 2,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "integer_range": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "object": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "flattened": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "nested": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 2,
+            "total": 2
+        },
+        "geo_point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 2,
+            "total": 2
+        },
+        "version": {
+            "pass": 2,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "histogram": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 2,
+            "total": 2
+        }
+    },
+    "keyword": {
+        "integer": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 2,
+            "total": 2
+        },
+        "double": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 2,
+            "total": 2
+        },
+        "byte": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 2,
+            "total": 2
+        },
+        "keyword": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 2,
+            "ignore": 0,
+            "total": 2
+        },
+        "constant_keyword": {
+            "pass": 1,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "wildcard": {
+            "pass": 2,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "date": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 2,
+            "total": 2
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 2,
+            "total": 2
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 2,
+            "total": 2
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "binary": {
+            "pass": 2,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "boolean": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 2,
+            "total": 2
+        },
+        "text": {
+            "pass": 2,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "match_only_text": {
+            "pass": 2,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "integer_range": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "object": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "flattened": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "nested": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 2,
+            "total": 2
+        },
+        "geo_point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 2,
+            "total": 2
+        },
+        "version": {
+            "pass": 2,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "histogram": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 2,
+            "total": 2
+        }
+    },
+    "constant_keyword": {
+        "integer": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "double": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "byte": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "keyword": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "constant_keyword": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 1,
+            "ignore": 0,
+            "total": 1
+        },
+        "wildcard": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "binary": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "boolean": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "text": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "match_only_text": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "integer_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "object": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "flattened": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "nested": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "geo_point": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "version": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "histogram": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        }
+    },
+    "wildcard": {
+        "integer": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "double": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "byte": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "keyword": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "constant_keyword": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "wildcard": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 1,
+            "ignore": 0,
+            "total": 1
+        },
+        "date": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "binary": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "boolean": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "text": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "match_only_text": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "integer_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "object": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "flattened": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "nested": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "geo_point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "version": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "histogram": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        }
+    },
+    "date": {
+        "integer": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 3
+        },
+        "double": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 2,
+            "total": 3
+        },
+        "byte": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 3
+        },
+        "keyword": {
+            "pass": 3,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "constant_keyword": {
+            "pass": 1,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "wildcard": {
+            "pass": 3,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "date": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 3,
+            "ignore": 0,
+            "total": 3
+        },
+        "date_nanos": {
+            "pass": 3,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 3
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "binary": {
+            "pass": 3,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "boolean": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 3
+        },
+        "text": {
+            "pass": 3,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "match_only_text": {
+            "pass": 3,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "integer_range": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "object": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "flattened": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "nested": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 3
+        },
+        "geo_point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 3
+        },
+        "version": {
+            "pass": 2,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "histogram": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 3
+        }
+    },
+    "date_nanos": {
+        "integer": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 3
+        },
+        "double": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 2,
+            "total": 3
+        },
+        "byte": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 3
+        },
+        "keyword": {
+            "pass": 3,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "constant_keyword": {
+            "pass": 1,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "wildcard": {
+            "pass": 3,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "date": {
+            "pass": 3,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 3,
+            "ignore": 0,
+            "total": 3
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 3
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "binary": {
+            "pass": 3,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "boolean": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 3
+        },
+        "text": {
+            "pass": 3,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "match_only_text": {
+            "pass": 3,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "integer_range": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "object": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "flattened": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "nested": {
+            "pass": 0,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 3
+        },
+        "geo_point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 3
+        },
+        "version": {
+            "pass": 2,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 3
+        },
+        "histogram": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 3
+        }
+    },
+    "ip": {
+        "integer": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 4,
+            "total": 4
+        },
+        "double": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 4,
+            "total": 4
+        },
+        "byte": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 4,
+            "total": 4
+        },
+        "keyword": {
+            "pass": 4,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 4
+        },
+        "constant_keyword": {
+            "pass": 1,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 4
+        },
+        "wildcard": {
+            "pass": 4,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 4
+        },
+        "date": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 4,
+            "total": 4
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 4,
+            "total": 4
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 4,
+            "ignore": 0,
+            "total": 4
+        },
+        "ip_range": {
+            "pass": 2,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 4
+        },
+        "binary": {
+            "pass": 4,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 4
+        },
+        "boolean": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 4,
+            "total": 4
+        },
+        "text": {
+            "pass": 4,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 4
+        },
+        "match_only_text": {
+            "pass": 4,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 4
+        },
+        "integer_range": {
+            "pass": 0,
+            "fail": 4,
+            "skip": 0,
+            "ignore": 0,
+            "total": 4
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 4,
+            "skip": 0,
+            "ignore": 0,
+            "total": 4
+        },
+        "object": {
+            "pass": 0,
+            "fail": 4,
+            "skip": 0,
+            "ignore": 0,
+            "total": 4
+        },
+        "flattened": {
+            "pass": 0,
+            "fail": 4,
+            "skip": 0,
+            "ignore": 0,
+            "total": 4
+        },
+        "nested": {
+            "pass": 0,
+            "fail": 4,
+            "skip": 0,
+            "ignore": 0,
+            "total": 4
+        },
+        "point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 4,
+            "total": 4
+        },
+        "geo_point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 4,
+            "total": 4
+        },
+        "version": {
+            "pass": 4,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 4
+        },
+        "histogram": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 4,
+            "total": 4
+        }
+    },
+    "ip_range": {
+        "integer": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "double": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "byte": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "keyword": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "constant_keyword": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "wildcard": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 1,
+            "ignore": 0,
+            "total": 1
+        },
+        "binary": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "boolean": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "text": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "match_only_text": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "integer_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "object": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "flattened": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "nested": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "geo_point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "version": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "histogram": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        }
+    },
+    "binary": {
+        "integer": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "double": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "byte": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "keyword": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "constant_keyword": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "wildcard": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "binary": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 1,
+            "ignore": 0,
+            "total": 1
+        },
+        "boolean": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "text": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "match_only_text": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "integer_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "object": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "flattened": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "nested": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "geo_point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "version": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "histogram": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        }
+    },
+    "boolean": {
+        "integer": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 4,
+            "total": 5
+        },
+        "double": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 4,
+            "total": 5
+        },
+        "byte": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 4,
+            "total": 5
+        },
+        "keyword": {
+            "pass": 5,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "constant_keyword": {
+            "pass": 2,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "wildcard": {
+            "pass": 5,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "date": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 5,
+            "total": 5
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 5,
+            "total": 5
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 5,
+            "total": 5
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 5,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "binary": {
+            "pass": 5,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "boolean": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 5,
+            "ignore": 0,
+            "total": 5
+        },
+        "text": {
+            "pass": 5,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "match_only_text": {
+            "pass": 5,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "integer_range": {
+            "pass": 0,
+            "fail": 5,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 5,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "object": {
+            "pass": 0,
+            "fail": 5,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "flattened": {
+            "pass": 0,
+            "fail": 5,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "nested": {
+            "pass": 0,
+            "fail": 5,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 5,
+            "total": 5
+        },
+        "geo_point": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 4,
+            "total": 5
+        },
+        "version": {
+            "pass": 5,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "histogram": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 5,
+            "total": 5
+        }
+    },
+    "text": {
+        "integer": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "double": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "byte": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "keyword": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "constant_keyword": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "wildcard": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "binary": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "boolean": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "text": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 1,
+            "ignore": 0,
+            "total": 1
+        },
+        "match_only_text": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "integer_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "object": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "flattened": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "nested": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "geo_point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "version": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "histogram": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        }
+    },
+    "match_only_text": {
+        "integer": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "double": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "byte": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "keyword": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "constant_keyword": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "wildcard": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "binary": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "boolean": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "text": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "match_only_text": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 1,
+            "ignore": 0,
+            "total": 1
+        },
+        "integer_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "object": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "flattened": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "nested": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "geo_point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "version": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "histogram": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        }
+    },
+    "integer_range": {
+        "integer": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "double": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "byte": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "keyword": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "constant_keyword": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "wildcard": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "binary": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "boolean": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "text": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "match_only_text": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "integer_range": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 1,
+            "ignore": 0,
+            "total": 1
+        },
+        "date_range": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "object": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "flattened": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "nested": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "geo_point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "version": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "histogram": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        }
+    },
+    "date_range": {
+        "integer": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "double": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "byte": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "keyword": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "constant_keyword": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "wildcard": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "binary": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "boolean": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "text": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "match_only_text": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "integer_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 1,
+            "ignore": 0,
+            "total": 1
+        },
+        "object": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "flattened": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "nested": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "geo_point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "version": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "histogram": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        }
+    },
+    "object": {
+        "integer": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "double": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "byte": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "keyword": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "constant_keyword": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "wildcard": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "date": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "binary": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "boolean": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "text": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "match_only_text": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "integer_range": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "object": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 2,
+            "ignore": 0,
+            "total": 2
+        },
+        "flattened": {
+            "pass": 2,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "nested": {
+            "pass": 2,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 2,
+            "total": 2
+        },
+        "geo_point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 2,
+            "total": 2
+        },
+        "version": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 2
+        },
+        "histogram": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 2,
+            "total": 2
+        }
+    },
+    "flattened": {
+        "integer": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "double": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "byte": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "keyword": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "constant_keyword": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "wildcard": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "binary": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "boolean": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "text": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "match_only_text": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "integer_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "object": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "flattened": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 1,
+            "ignore": 0,
+            "total": 1
+        },
+        "nested": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "geo_point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "version": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "histogram": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        }
+    },
+    "nested": {
+        "integer": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "double": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "byte": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "keyword": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "constant_keyword": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "wildcard": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "binary": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "boolean": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "text": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "match_only_text": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "integer_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "object": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "flattened": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "nested": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 1,
+            "ignore": 0,
+            "total": 1
+        },
+        "point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "geo_point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "version": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "histogram": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        }
+    },
+    "point": {
+        "integer": {
+            "pass": 1,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 2,
+            "total": 5
+        },
+        "double": {
+            "pass": 1,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 2,
+            "total": 5
+        },
+        "byte": {
+            "pass": 1,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 2,
+            "total": 5
+        },
+        "keyword": {
+            "pass": 3,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "constant_keyword": {
+            "pass": 1,
+            "fail": 4,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "wildcard": {
+            "pass": 3,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "date": {
+            "pass": 1,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 2,
+            "total": 5
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 3,
+            "total": 5
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 3,
+            "total": 5
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 5,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "binary": {
+            "pass": 3,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "boolean": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 3,
+            "total": 5
+        },
+        "text": {
+            "pass": 3,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "match_only_text": {
+            "pass": 3,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "integer_range": {
+            "pass": 0,
+            "fail": 5,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 5,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "object": {
+            "pass": 2,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "flattened": {
+            "pass": 2,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "nested": {
+            "pass": 2,
+            "fail": 3,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 5,
+            "ignore": 0,
+            "total": 5
+        },
+        "geo_point": {
+            "pass": 3,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 2,
+            "total": 5
+        },
+        "version": {
+            "pass": 3,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 5
+        },
+        "histogram": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 5,
+            "total": 5
+        }
+    },
+    "geo_point": {
+        "integer": {
+            "pass": 1,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 3,
+            "total": 6
+        },
+        "double": {
+            "pass": 1,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 3,
+            "total": 6
+        },
+        "byte": {
+            "pass": 1,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 3,
+            "total": 6
+        },
+        "keyword": {
+            "pass": 4,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 6
+        },
+        "constant_keyword": {
+            "pass": 1,
+            "fail": 5,
+            "skip": 0,
+            "ignore": 0,
+            "total": 6
+        },
+        "wildcard": {
+            "pass": 4,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 6
+        },
+        "date": {
+            "pass": 1,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 3,
+            "total": 6
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 4,
+            "total": 6
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 4,
+            "total": 6
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 6,
+            "skip": 0,
+            "ignore": 0,
+            "total": 6
+        },
+        "binary": {
+            "pass": 4,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 6
+        },
+        "boolean": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 4,
+            "total": 6
+        },
+        "text": {
+            "pass": 4,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 6
+        },
+        "match_only_text": {
+            "pass": 4,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 6
+        },
+        "integer_range": {
+            "pass": 0,
+            "fail": 6,
+            "skip": 0,
+            "ignore": 0,
+            "total": 6
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 6,
+            "skip": 0,
+            "ignore": 0,
+            "total": 6
+        },
+        "object": {
+            "pass": 2,
+            "fail": 4,
+            "skip": 0,
+            "ignore": 0,
+            "total": 6
+        },
+        "flattened": {
+            "pass": 2,
+            "fail": 4,
+            "skip": 0,
+            "ignore": 0,
+            "total": 6
+        },
+        "nested": {
+            "pass": 2,
+            "fail": 4,
+            "skip": 0,
+            "ignore": 0,
+            "total": 6
+        },
+        "point": {
+            "pass": 3,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 3,
+            "total": 6
+        },
+        "geo_point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 6,
+            "ignore": 0,
+            "total": 6
+        },
+        "version": {
+            "pass": 4,
+            "fail": 2,
+            "skip": 0,
+            "ignore": 0,
+            "total": 6
+        },
+        "histogram": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 6,
+            "total": 6
+        }
+    },
+    "version": {
+        "integer": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "double": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "byte": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "keyword": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "constant_keyword": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "wildcard": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "binary": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "boolean": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "text": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "match_only_text": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "integer_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "object": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "flattened": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "nested": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "geo_point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "version": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 1,
+            "ignore": 0,
+            "total": 1
+        },
+        "histogram": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        }
+    },
+    "histogram": {
+        "integer": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "double": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "byte": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "keyword": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "constant_keyword": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "wildcard": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date_nanos": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "ip": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "ip_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "binary": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "boolean": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "text": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "match_only_text": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "integer_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "date_range": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "object": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "flattened": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "nested": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "geo_point": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0,
+            "ignore": 1,
+            "total": 1
+        },
+        "version": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0,
+            "ignore": 0,
+            "total": 1
+        },
+        "histogram": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 1,
+            "ignore": 0,
+            "total": 1
+        }
+    }
+}

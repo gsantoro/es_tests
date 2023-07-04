@@ -17,4 +17,6 @@
   languages.python.venv.enable = true;
   languages.python.poetry.enable = true;
   languages.python.poetry.install.enable = true;
+
+  scripts.elastic-package-install.exec = "go install github.com/elastic/elastic-package@latest";
 }

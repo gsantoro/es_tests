@@ -7,3 +7,6 @@ devenv.local.nix
 
 # PYTHON
 __pycache__
+
+## tmp files
+data/tmp
